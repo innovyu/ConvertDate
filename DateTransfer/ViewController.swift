@@ -147,7 +147,7 @@ class ViewController: UIViewController {
             outYearNos = "平成"
             return ("真不是蒙的！和历是: " + outYearNos + " " + years + "年")
             
-        default : outYearNos = "1868年9月8号以前还没有年号呢！"
+        default : outYearNos = "1868年9月8号以前是古年号，不稀查吧！"
             return (outYearNos)
         }
     
