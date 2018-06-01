@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateTransfer/ViewController.swift"
-            timestampString = "549380506.0062079"
+            timestampString = "549553922.041787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "OKTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -22,7 +22,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateTransfer/ViewController.swift"
@@ -35,49 +35,49 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "DateTransfer.ViewController.init (DateTransfer.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; DateTransfer.ViewController"
                   moduleName = "DateTransfer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/black/Desktop/IOS/DateTransfer/DateTransfer/ViewController.swift"
-                  timestampString = "549292070.809436"
+                  timestampString = "549553684.793889"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
                   endingLineNumber = "11"
-                  offsetFromSymbolStart = "202">
+                  offsetFromSymbolStart = "219">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "DateTransfer.ViewController.__allocating_init (DateTransfer.ViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;DateTransfer.ViewController&gt;"
                   moduleName = "DateTransfer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/black/Desktop/IOS/DateTransfer/DateTransfer/ViewController.swift"
-                  timestampString = "549292070.809687"
+                  timestampString = "549553684.7940691"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
                   endingLineNumber = "11"
-                  offsetFromSymbolStart = "151">
+                  offsetFromSymbolStart = "168">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "DateTransfer.ViewController.init (DateTransfer.ViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;DateTransfer.ViewController&gt;"
                   moduleName = "DateTransfer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/black/Desktop/IOS/DateTransfer/DateTransfer/ViewController.swift"
-                  timestampString = "549292070.809835"
+                  timestampString = "549553684.7942131"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
                   endingLineNumber = "11"
-                  offsetFromSymbolStart = "137">
+                  offsetFromSymbolStart = "154">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -89,7 +89,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateTransfer/ViewController.swift"
-            timestampString = "549381177.435123"
+            timestampString = "549553922.041787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -105,7 +105,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateTransfer/ViewController.swift"
-            timestampString = "549381177.435123"
+            timestampString = "549553922.041787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "152"
@@ -121,7 +121,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateTransfer/ViewController.swift"
-            timestampString = "549381177.435123"
+            timestampString = "549553922.041787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "152"
