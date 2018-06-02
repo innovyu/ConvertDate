@@ -166,8 +166,7 @@ class ViewController: UIViewController ,UITextFieldDelegate{
     
     //8 byte limit
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
-        replacementString string: String) -> Bool
-    {
+        replacementString string: String) -> Bool{
         let maxLength = 8
         let currentString: NSString = textField.text!
         let newString: NSString =
