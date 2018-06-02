@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,UITextFieldDelegate{
     
     @IBOutlet weak var inputDate: UITextField!
     @IBOutlet weak var okButton: UIButton!
@@ -17,10 +17,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputDate.delegate = self
         
         inputDate.placeholder = "YYYYMMDD"
         inputDate.clearButtonMode = .WhileEditing
         inputDate.tintColor = UIColor.grayColor()
+        
+        inputDate.layer.masksToBounds = true
+        inputDate.layer.cornerRadius = 6.0
+        inputDate.layer.borderWidth = 2.0
+        inputDate.layer.borderColor = UIColor.redColor().CGColor
         
         outputImage.image = UIImage(named: "0")
         
@@ -49,8 +55,9 @@ class ViewController: UIViewController {
         inputDate.resignFirstResponder() //hide the keyboard
         
         let str1 = inputDate.text
+        let str1Trim = str1!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
-        if  str1!.characters.count == 8{
+        if  str1Trim.characters.count == 8{
             
             let str2 = str1!.substringFromIndex(str1!.startIndex.advancedBy(4)) //MMDD
             
@@ -60,12 +67,17 @@ class ViewController: UIViewController {
             
             let day = Int(str1!.substringFromIndex(str1!.startIndex.advancedBy(6)))
             
-            let checkDate = effectiveDate(year!,month:month!,day:day!)
+            var checkDate = false
+            
+            //when input is numberic, check the date
+            if(year != nil && month != nil && day != nil){
+                
+                checkDate = effectiveDate(year!,month:month!,day:day!)
+            }
             
             if(checkDate){
                 
                 var cal: NSCalendar!
-                
                 let df = NSDateFormatter()
                 df.dateStyle = .LongStyle
                 
@@ -88,38 +100,37 @@ class ViewController: UIViewController {
                 
             }else{
                 outputImage.image = UIImage(named: "2")
-                outputDateLb.text = "你自己看看你敲的日期,有这天吗！?"
+                outputDateLb.text = "你自己看看你敲的什么,有这天吗！?"
+            }
+        }else{
+            //input is space or null
+            if (str1Trim == "" || str1 == nil){
+                outputImage.image = UIImage(named: "0")
+                outputDateLb.text = ""
+            }else{
+                //input < 8 byte
+                outputImage.image = UIImage(named: "1")
+                outputDateLb.text = "瞎敲什么！你敲的是日期吗！？"
             }
             
-        }else{
-            outputImage.image = UIImage(named: "1")
-            outputDateLb.text = "瞎敲什么！日期几位？啊？几位！？"
         }
+        
     }
     
     //check date
     func effectiveDate(year:Int,month:Int,day:Int)->Bool{
         
         if year <= 0{return false}
-        
         if month < 1 || month > 12{return false}
-        
         var months = [31,0,31,30,31,30,31,31,30,31,30,31]
         
         if (year%4 == 0 && year%100 != 0) || year%400 == 0{
-            
             months[1] = 29
-            
         }else{
-            
             months[1]=28
-            
         }
-        
         return (day>=1)&&(day<=months[month-1])
-        
     }
-    
     
     func output(output:String)->String{
         
@@ -151,5 +162,16 @@ class ViewController: UIViewController {
         return (outYearNos)
         }
         
+    }
+    
+    //8 byte limit
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
+        replacementString string: String) -> Bool
+    {
+        let maxLength = 8
+        let currentString: NSString = textField.text!
+        let newString: NSString =
+        currentString.stringByReplacingCharactersInRange(range, withString: string)
+        return newString.length <= maxLength
     }
 }

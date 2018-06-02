@@ -32,7 +32,7 @@ if let date = cal.dateFromComponents(comps) {
     
     //和暦で表示する
     df.calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierJapanese)
-    print("和历是："+output(df.stringFromDate(date)))
+   // print("和历是："+output(df.stringFromDate(date)))
     
 }
 
@@ -92,3 +92,6 @@ func effectiveDate(year:Int,month:Int,day:Int)->Bool{
 }
 
 let a = effectiveDate(2000,month:02,day:30)
+
+let aa = Int("11a")
+
